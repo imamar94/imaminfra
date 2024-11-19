@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:latest
+    profiles: ["service", "all"]
+    depends_on: []
+    volumes:
+      - ./nginx/conf/default.conf:/etc/nginx/conf.d/default.conf
+      - ./certbot/www:/var/www/certbot:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+    ports:
+      - '80:80'
+      - '443:443'
+  certbot:
+    image: certbot/certbot:latest
+    command: certonly --webroot --webroot-path /var/www/certbot -d imam-ar.com -d www.imam-ar.com
+    profiles: ["all"]
+    depends_on:
+      - nginx
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/conf/:/etc/letsencrypt/:rw
+  imamweb:
+    build: ./imam-web
+    profiles: ["service", "all"]
+    container_name: imam-web
+    expose:
+      - 3000
