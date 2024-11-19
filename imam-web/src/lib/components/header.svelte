@@ -9,11 +9,11 @@
 
   
   <div class="flex grow justify-center">
-    <div class="flex px-8 gap-4 lg:gap-8 content-center items-center shadow-xl rounded-full dark:ring-1 dark:ring-slate-500 dark:bg-slate-700">
+    <div class="flex md:grid-cols-4 px-8 gap-4 lg:gap-8 content-center items-center shadow-xl rounded-full dark:ring-1 dark:ring-slate-500 dark:bg-slate-700">
       <a href="/">about</a>
       <a href="https://blog.imam-ar.com">blog</a>
-      <a href="/projects">portofolio</a>
-      <a href="/about">contact</a>
+      <a href="/portfolio">portfolio</a>
+      <a href="/contact">contact</a>
     </div>
   </div>
 

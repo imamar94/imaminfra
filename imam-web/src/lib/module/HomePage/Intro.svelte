@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Heading, Gallery , P } from "svelte-5-ui-lib";
+    import { Heading, Gallery , P, Button } from "svelte-5-ui-lib";
     import { onMount } from "svelte";
     import ImgMe from "$lib/images/me.jpg";
 
@@ -33,8 +33,22 @@
         >Hello!</Heading>
 
         <P class=" text-2xl  text-slate-600 dark:text-slate-200">
-            I'm Imam, a versatile <span class=" bg-primary-400 dark:bg-slate-200 dark:text-slate-800">{role}</span>
+            Imam here, I am a <span class=" bg-primary-400 dark:bg-slate-200 dark:text-slate-800">{role}</span>.
         </P>
+
+        <P class=" text-slate-600 dark:text-slate-200">
+            Thinking of having a chat? I am open for a coffee or a call.
+        </P>
+
+        <div class=" flex w-full py-8">
+
+            <Button
+            color="primary"
+            class="items-center"
+            href="/contact"
+            pill
+            >Reach me!</Button>
+        </div>
     </div>
     <div class=" flex-grow">
         <Gallery items={images1} divClass="gap-4 grid-cols-1" />
