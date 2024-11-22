@@ -54,8 +54,10 @@
     "vite": "^5.0.11"
   },
   "dependencies": {
+    "@azure/identity": "^4.5.0",
     "flowbite": "^2.5.2",
     "flowbite-svelte": "^0.47.3",
-    "flowbite-svelte-icons": "^2.0.2"
+    "flowbite-svelte-icons": "^2.0.2",
+    "openai": "^4.73.0"
   }
 }
